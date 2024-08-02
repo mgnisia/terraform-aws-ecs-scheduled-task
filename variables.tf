@@ -23,12 +23,6 @@ variable "container_definitions" {
   description = "A list of valid container definitions provided as a single valid JSON document."
 }
 
-variable "is_enabled" {
-  default     = true
-  type        = string
-  description = "Whether the rule should be enabled."
-}
-
 variable "task_count" {
   default     = 1
   type        = string
@@ -117,4 +111,10 @@ variable "ecs_task_execution_role_arn" {
   default     = ""
   type        = string
   description = "The ARN of the ECS Task Execution IAM Role."
+}
+
+variable "ecs_task_role_arn" {
+  default = ""
+  description = "ARN of IAM role that allows your Amazon ECS container task to make calls to other AWS services."
+  type = string
 }
